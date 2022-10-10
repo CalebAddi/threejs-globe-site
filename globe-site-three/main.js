@@ -1,9 +1,10 @@
 import * as THREE from 'three';
-import { Color } from 'three';
 import vertexShader from './Shaders/vertex.glsl';
 import fragmentShader from './Shaders/fragment.glsl';
 import atmosphereVertexShader from './Shaders/atmosphereVert.glsl';
 import atmosphereFragmentShader from './Shaders/atmosphereFrag.glsl';
+// import imageUrl from './public/EarthUV.jpg';
+
 import './style.css';
 
 const scene = new THREE.Scene();
@@ -49,7 +50,7 @@ const sphere = new THREE.Mesh(new THREE.SphereGeometry(.9, 60, 60), new THREE.Sh
   fragmentShader,
   uniforms: {
     globeTexture: {
-      value: new THREE.TextureLoader().load('./Textures/EarthUV.jpg'),
+      value: new THREE.TextureLoader().load('EarthUV.jpg'),
     }
   }
 }));
